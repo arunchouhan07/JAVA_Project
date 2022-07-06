@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Admin Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="Homepage/AdminLoginRegister/css/style.css">
+
+	</head>
+	
+	<style>
+	#btnsub{
+	background-color:#1997cc;
+	
+	
+	}
+	
+	</style>
+	
+	<script type="text/javascript">
+	function email_validate(email)
+	{
+	var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+
+	    if(regMail.test(email) == false)
+	    {
+	    document.getElementById("status").innerHTML    = "<span class='warning'>Email address is not valid yet.</span>";
+	    }
+	    else
+	    {
+	    document.getElementById("status").innerHTML	= "<span class='valid'>Thanks, you have entered a valid Email address!</span>";	
+	    }
+	}
+	
+	
+	</script>
+	<body class="img js-fullheight" style="background-image: url(Homepage/assets/img/unsplash.jpg);">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h3 class="heading-section">ADMIN  REGISTRATION</h3>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	
+		      	<form action="registerAdmin.jsp" class="form">
+		      		<div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Enter AdminID"  minlength="10" maxlength="30" id="txtAid" name="txtAid"  onchange="email_validate(this.value);"required>
+		      		</div>
+	            <div class="form-group">
+	              <input  type="password" class="form-control" placeholder="Enter Password" minlength="4" maxlength=16 id="txtPassword" name="txtPassword" required>
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+	            <div class="form-group">
+	            	<button id="btnsub" type="submit" class="form-control btn submit px-3">REGISTER</button>
+	            </div>
+	            <div class="form-group d-md-flex">
+	            	<div class="w-50">
+		            	<label class="checkbox-wrap checkbox-primary">Remember Me
+									  <input type="checkbox" checked>
+									  <span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="w-50 text-md-right">
+									<a href="#" style="color: #fff">Forgot Password?</a>
+								</div>
+	            </div>
+	          </form>
+	          <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+	          <div class="social d-flex text-center">
+	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
+	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
+	          </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="Homepage/AdminLoginRegister/js/jquery.min.js"></script>
+  <script src="Homepage/AdminLoginRegister/js/popper.js"></script>
+  <script src="Homepage/AdminLoginRegister/js/bootstrap.min.js"></script>
+  <script src="Homepage/AdminLoginRegister/js/main.js"></script>
+
+	</body>
+</html>
+
